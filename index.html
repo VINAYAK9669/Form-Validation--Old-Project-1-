@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--Linking the Materilize CSS's CDN link-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<!--Adding the Google font link "Poppin"-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@600&family=Edu+VIC+WA+NT+Beginner:wght@600&family=Poppins:wght@300;500&family=Red+Hat+Display:wght@700;900&display=swap"
+		rel="stylesheet">
+	<!--Now we will link the Font Awesome link-->
+	<script src="https://kit.fontawesome.com/f8abb678a6.js" crossorigin="anonymous"></script>
+	<!--Now linking the CSS file-->
+	<link rel="stylesheet" href="index.css">
+	<title>Form Validation</title>
+</head>
+
+<body>
+	<!--TODO: Creating the form container which will contain all the elements of form-->
+	<div class="form-container">
+		<!--Creating a header for the form -->
+		<h1>Login</h1>
+		<!--Now everthing needs to be add in the form tag so we can send the data at required location-->
+
+		<form action="#" id="loginForm" method="post">
+			<!--TODO: Let us take a username as a input-->
+			<div class="form-field">
+
+				<label for="loginUsername">Username</label>
+				<input type="text" id="loginUsername" placeholder="Enter Your Name" required>
+				<small class="alert-message">Error message</small>
+
+			</div>
+			<!--TODO: Let us take a user password as a input-->
+			<div class="form-field">
+
+				<label for="loginPassword">Password</label>
+				<input type="password" id="loginPassword" placeholder="Enter Your Password" required>
+				<!--TODO: Now we will create show and hide password -->
+				<div class="form-field" id="showHideIcon">
+					<!--Adding an icon from font awesome-->
+					<i class="fa-solid fa-eye" id="eyeIcon"></i>
+					<label for="eyeIcon">Show/Hide Password</label>
+				</div>
+				<!--Below are the errors/instruction need to be shown when user entering a password-->
+				<small class="Instructor alert-message">First letter Must be Capital</small><br>
+				<small class="Instructor alert-message">Must Include atleast one symbol</small><br>
+				<small class="Instructor alert-message">At least 4 letters needed</small>
+				<br>
+			</div>
+			<!--TODO:Finally will create an submit button-->
+
+			<button class="btn" type="submit"><strong>Go</strong> </button>
+
+		</form>
+
+		<!--Still wanted to implement forgot username or password-->
+	</div>
+
+</body>
+<!--Linking the Javascript File-->
+<script src="index.js"></script>
+
+</html>
